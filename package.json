@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/degva/techsys-cli",
   "dependencies": {
-    "express": "^4.7.2"
+    "express": "^4.7.2",
+    "tty.js": "^0.2.13"
   }
 }
