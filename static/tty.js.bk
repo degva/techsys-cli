@@ -70,7 +70,7 @@ tty.open = function() {
     root: document.documentElement,
     body: document.body,
     h1: document.getElementsByTagName('h1')[0],
-    open: document.getElementById('connect'),
+    open: document.getElementById('open'),
     lights: document.getElementById('lights')
   };
 
@@ -80,20 +80,17 @@ tty.open = function() {
   open = tty.elements.open;
   lights = tty.elements.lights;
 
-	
   if (open) {
     on(open, 'click', function() {
       new Window;
     });
   }
 
-	/*
   if (lights) {
     on(lights, 'click', function() {
       tty.toggleLights();
     });
   }
-	*/
 
   tty.socket.on('connect', function() {
     tty.reset();
@@ -899,7 +896,6 @@ function load() {
 
   off(document, 'load', load);
   off(document, 'DOMContentLoaded', load);
-	console.log('Happening');
   tty.open();
 }
 
